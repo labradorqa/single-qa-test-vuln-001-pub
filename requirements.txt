@@ -1,0 +1,40 @@
+# Intentionally vulnerable Python deps for IVAS QA.
+
+# Django 2.2.0 — SQL injection (CVE-2020-7471), header injection 외
+Django==2.2.0
+
+# Flask 0.12.2 — old version multiple CVEs
+Flask==0.12.2
+
+# requests 2.19.1 — CRLF (CVE-2018-18074)
+requests==2.19.1
+
+# urllib3 1.24.1 — CRLF, redirect handling (CVE-2019-11324, CVE-2020-26137)
+urllib3==1.24.1
+
+# PyYAML 3.13 — arbitrary code execution via yaml.load (CVE-2017-18342)
+PyYAML==3.13
+
+# Jinja2 2.7.2 — sandbox escape
+Jinja2==2.7.2
+
+# Werkzeug 0.11.10 — debugger PIN bypass
+Werkzeug==0.11.10
+
+# SQLAlchemy 1.2.18 — SQL injection in order_by (CVE-2019-7164)
+SQLAlchemy==1.2.18
+
+# Pillow 8.1.0 — multiple buffer overflows
+Pillow==8.1.0
+
+# cryptography 2.3 — weak RSA generation
+cryptography==2.3
+
+# pycrypto 2.6.1 — deprecated, many issues
+pycrypto==2.6.1
+
+# paramiko 2.4.1 — auth bypass (CVE-2018-7750)
+paramiko==2.4.1
+
+# lxml 4.6.2 — XXE / billion laughs
+lxml==4.6.2

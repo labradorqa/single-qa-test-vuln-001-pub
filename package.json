@@ -1,0 +1,39 @@
+{
+  "name": "samsungfire-qa-base-vuln",
+  "version": "1.0.0",
+  "description": "Vulnerable baseline for IVAS QA — multiple intentional CVE-bearing deps + insecure code patterns",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "lodash": "4.17.10",
+    "minimist": "0.0.8",
+    "qs": "6.5.1",
+    "express": "4.16.0",
+    "moment": "2.24.0",
+    "axios": "0.18.0",
+    "node-serialize": "0.0.4",
+    "debug": "2.0.0",
+    "jsonwebtoken": "0.4.0",
+    "ms": "0.7.0",
+    "marked": "0.3.6",
+    "request": "2.81.0",
+    "tar": "2.0.0",
+    "xml2js": "0.4.19",
+    "ejs": "3.1.6",
+    "handlebars": "4.0.13",
+    "mongoose": "5.7.5",
+    "ldapjs": "1.0.2",
+    "libxmljs": "0.19.7",
+    "fastify": "2.0.0",
+    "y18n": "3.2.1",
+    "shelljs": "0.8.4",
+    "yargs-parser": "5.0.0",
+    "node-forge": "0.9.0",
+    "validator": "10.4.0",
+    "mysql": "2.16.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
