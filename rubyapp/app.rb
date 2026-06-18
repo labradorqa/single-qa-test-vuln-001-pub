@@ -1,24 +1,25 @@
-# rubyapp/app.rb — 취약 gem(nokogiri 등)을 함수에서 사용하는 코드 취약점.
+# rubyapp/app.rb — Sinatra 진입점. params(원격 소스)를 취약 sink로 연결 → CodeQL taint flow 발동.
+require 'sinatra'
 require 'nokogiri' # nokogiri 1.10.4
 
 SECRET_KEY = 'super-secret-rails-key'.freeze # CWE-798
 
-# CWE-502: 신뢰 불가 데이터를 Marshal.load
-def load_session(blob)
-  Marshal.load(blob)
-end
-
 # CWE-95: eval 인젝션
-def run_rule(expr)
-  eval(expr)
+get '/eval' do
+  eval(params[:expr])
 end
 
 # CWE-78: command injection
-def backup(name)
-  system("tar czf /tmp/#{name}.tgz /data")
+get '/backup' do
+  system("tar czf /tmp/#{params[:name]}.tgz /data")
+end
+
+# CWE-502: 신뢰 불가 데이터 Marshal.load
+post '/load' do
+  Marshal.load(request.body.read)
 end
 
 # CWE-611: Nokogiri NOENT → XXE
-def parse_xml(xml)
-  Nokogiri::XML(xml) { |c| c.noblanks.noent.dtdload }
+post '/xml' do
+  Nokogiri::XML(request.body.read) { |c| c.noblanks.noent.dtdload }.to_s
 end
