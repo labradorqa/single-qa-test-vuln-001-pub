@@ -32,7 +32,21 @@
     "yargs-parser": "5.0.0",
     "node-forge": "0.9.0",
     "validator": "10.4.0",
-    "mysql": "2.16.0"
+    "mysql": "2.16.0",
+    "cxp-jquery": "1.0.0",
+    "dbp-polyfills": "1.0.0",
+    "digital-marketing-client": "1.0.0",
+    "lib-bb-html-sanitizer": "1.0.0",
+    "portal-shell": "1.0.0",
+    "a11y-speak": "1.0.0",
+    "a11ydevtool": "1.0.0",
+    "aa-bundler": "1.0.0",
+    "a-simple-cache": "1.0.0",
+    "a12l-components": "1.0.0",
+    "a12l-types": "1.0.0",
+    "a2z-promo-tool": "1.0.0",
+    "a-pem-misa": "1.0.0",
+    "a2a-chat-canvas": "1.0.0"
   },
   "license": "UNLICENSED",
   "private": true
