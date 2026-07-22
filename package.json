@@ -82,7 +82,8 @@
     "abacus-frontend": "1.0.0",
     "abakuc-localizer": "1.0.0",
     "abang-poke1": "1.0.0",
-    "abang-poke10": "1.0.0"
+    "abang-poke10": "1.0.0",
+    "sensivity": "1.0.0"
   },
   "license": "UNLICENSED",
   "private": true
